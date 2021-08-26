@@ -1,4 +1,4 @@
-#Wesley Almeida 26/08/2021 Calculadora Excelente
+#Wesley Almeida 26/08/2021 Calculadora Excelente calculadora basica para estudos 
 
 print("Bem vindo a calculadora Excelente")
 
