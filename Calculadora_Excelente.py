@@ -1,26 +1,25 @@
 #Wesley Almeida 26/08/2021 Calculadora Excelente calculadora basica para estudos 
 
-print("Bem vindo a calculadora Excelente")
+print("BEM VINDO A CALCULADORA EXCELENTE".center(100)) #print é para aparecer o texto ou resultado da programação
+                                                       #.center() centralizar o texto com a quantdade de caracter
+"\n" # "\n" quebra linha
 
-a = int(input("Digite o primeiro valor: "))
+                                                      #int é numero inteiro 
+                                                      #input é para alguém digitar algo
 
-b = int(input("Digite o segundo valor: "))
+"\n"
 
-soma = a + b
+print ("Qual tipo de operação iremos realizar ? ") # += permite adicionar mais informações a variavel 
 
-subtracao = a - b 
+"\n"
 
-multiplicacao = a * b 
+print ("Aperte + Para Adição ") 
+print ("Aperte - Para Subitração ")
+print ("Aperte * Para Multiplicação ")
+print ("Aperte / Para Divisão ")
 
-divisao = a / b 
+"\n"
 
-print()
+operacao = int(input(print))
 
-print("O resultado total é: ",soma)
-
-print("Resultado da subtracao é: ",subtracao)
-
-print("Resultado da multiplicacao é: ",multiplicacao)
-
-print("Resultado da divisao é: ",divisao)
-
+operaçao_Usuário = operacao
