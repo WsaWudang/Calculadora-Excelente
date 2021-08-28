@@ -1,25 +1,81 @@
 #Wesley Almeida 26/08/2021 Calculadora Excelente calculadora basica para estudos 
 
-print("BEM VINDO A CALCULADORA EXCELENTE".center(100)) #print é para aparecer o texto ou resultado da programação
-                                                       #.center() centralizar o texto com a quantdade de caracter
-"\n" # "\n" quebra linha
+def main():
+	print("BEM VINDO A CALCULADORA EXCELENTE \n ".center(100)) 
+	
+	print ("Qual tipo de operação iremos realizar ? \n ") 
 
-                                                      #int é numero inteiro 
-                                                      #input é para alguém digitar algo
+	print ("Aperte + Para Adição ") 
+	print ("Aperte - Para Subtração ")
+	print ("Aperte * Para Multiplicação ")
 
-"\n"
+	operacao = (input("Aperte / Para Divisão: "))
 
-print ("Qual tipo de operação iremos realizar ? ") # += permite adicionar mais informações a variavel 
+	if (operacao == "+"):
+		adicao()
+	elif (operacao == "-"):
+		subtracao()
+	elif (operacao == "*"):
+		multiplicacao()
+	elif (operacao == "/"):
+		divisao()
+	else: 
+		main()
 
-"\n"
+def adicao():
+	a = numero()
+	b = numero()
+	c = a + b
 
-print ("Aperte + Para Adição ") 
-print ("Aperte - Para Subitração ")
-print ("Aperte * Para Multiplicação ")
-print ("Aperte / Para Divisão ")
+	resultado("soma", a, b, c)
 
-"\n"
+	novaOperacao()
+			
+def subtracao():
+	a = numero()
+	b = numero()
+	c = a - b
 
-operacao = int(input(print))
+	resultado("subtração", a, b, c)
 
-operaçao_Usuário = operacao
+	novaOperacao()
+
+def multiplicacao():
+	a = numero()
+	b = numero()
+	c = a * b
+
+	resultado("multiplicacao", a, b, c)
+
+	novaOperacao()
+
+
+def divisao():
+	a = numero()
+	b = numero()
+	c = a / b
+
+	resultado("divisao", a, b, c)
+
+	novaOperacao()
+
+def novaOperacao():
+	resposta = input("Deseja fazer uma nova operação? S/N ")
+
+	if (resposta == "S" or resposta == "s" or resposta == "sim" or resposta == "SIM"):
+		main()
+	elif (resposta == "N" or resposta == "n" or resposta == "nao" or resposta == "NAO"):
+		exit()
+	else:
+		novaOperacao()
+
+def numero():
+	a = int(input("Digite o numero: "))
+	return a 
+	
+def resultado(operador, a, b, c):
+	print("A ", operador, " de ", a, " e ", b, "é igual:", c)
+
+main()
+
+
