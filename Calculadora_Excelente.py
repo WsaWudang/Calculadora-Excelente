@@ -1,15 +1,13 @@
 #Wesley Almeida 26/08/2021 Calculadora Excelente calculadora basica para estudos 
 
 def main():
-	print("BEM VINDO A CALCULADORA EXCELENTE \n ".center(100)) 
-	
-	print ("Qual tipo de operação iremos realizar ? \n ") 
+	print("BEM VINDO A CALCULADORA EXCELENTE \n ".center(100))
+	print ("Qual tipo de operação iremos realizar ? \n ")
+	print ("""Aperte + Para Adição
+Aperte - Para Subtração
+Aperte * Para Multiplicação """)
 
-	print ("Aperte + Para Adição ") 
-	print ("Aperte - Para Subtração ")
-	print ("Aperte * Para Multiplicação ")
-
-	operacao = (input("Aperte / Para Divisão: "))
+	operacao = (input("Aperte / Para Divisão \n"))
 
 	if (operacao == "+"):
 		adicao()
@@ -25,7 +23,7 @@ def main():
 def adicao():
 	a = numero()
 	b = numero()
-	c = a + b
+	c = a + b 
 
 	resultado("soma", a, b, c)
 
@@ -49,7 +47,6 @@ def multiplicacao():
 
 	novaOperacao()
 
-
 def divisao():
 	a = numero()
 	b = numero()
@@ -60,7 +57,7 @@ def divisao():
 	novaOperacao()
 
 def novaOperacao():
-	resposta = input("Deseja fazer uma nova operação? S/N ")
+	resposta = input("\nDeseja fazer uma nova operação? S/N ")
 
 	if (resposta == "S" or resposta == "s" or resposta == "sim" or resposta == "SIM"):
 		main()
@@ -74,7 +71,7 @@ def numero():
 	return a 
 	
 def resultado(operador, a, b, c):
-	print("A ", operador, " de ", a, " e ", b, "é igual:", c)
+	print("\n""A ", operador, " de ", a, " e ", b, "é igual:", c)
 
 main()
 
